@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<database name="test_test" defaultIdMethod="native">
+<database name="Project_test" defaultIdMethod="native">
   <!-- table definitions go here -->
 	
 	<table name="repositories" defaultMethod="native">

@@ -4,23 +4,23 @@ return [
     'propel' => [
         'database' => [
             'connections' => [
-                'test_test' => [
+                'Project_test' => [
                     'adapter'    => 'mysql',
                     'classname'  => 'Propel\Runtime\Connection\ConnectionWrapper',
                     'dsn'        => 'mysql:host=localhost;dbname=test_test',
-                    'user'       => 'hpatel',
-                    'password'   => 'ha97jq',
+                    'user'       => '',
+                    'password'   => '',
                     'attributes' => []
                 ]
             ]
         ],
         'runtime' => [
-            'defaultConnection' => 'test_test',
-            'connections' => ['test_test']
+            'defaultConnection' => 'Project_test',
+            'connections' => ['Project_test']
         ],
         'generator' => [
-            'defaultConnection' => 'test_test',
-            'connections' => ['test_test'],
+            'defaultConnection' => 'Project_test',
+            'connections' => ['Project_test'],
 			'dateTime' => [
 								'useDateTimeClass'=> true,
 								'dateTimeClass'=> '',
