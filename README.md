@@ -33,7 +33,11 @@ Build Project in Propel
 	
 		create Database named "Project_test" in your mysql server.(You can choose DB name as you like,but if you do so make sure to change DB name in schema.xml and propel.php)
 	
-		schema.xml and propel.php files has all neccessory DB configuration information.
+		schema.xml and propel.php files has all neccessory DB configuration information. 
+		
+		IMPORTANT STEP 
+		
+		Add your database login creadentials in propel.php file.
 		
 		type following commands in terminal
 		
