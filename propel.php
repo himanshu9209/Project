@@ -7,7 +7,7 @@ return [
                 'Project_test' => [
                     'adapter'    => 'mysql',
                     'classname'  => 'Propel\Runtime\Connection\ConnectionWrapper',
-                    'dsn'        => 'mysql:host=localhost;dbname=test_test',
+                    'dsn'        => 'mysql:host=localhost;dbname=Project_test',
                     'user'       => '',
                     'password'   => '',
                     'attributes' => []
