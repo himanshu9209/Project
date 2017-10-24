@@ -95,7 +95,25 @@ Build Project in Propel
 		
 		
 		
-		
+Once you are dont with installation and build 	
+	
+	run load_data.php fle in browser or on terminal, this should not give you any output. 
+	This file loadds data in database table "repositories". if record for perticular repositories id already present it will update it.
+	
+	Once data is loaded run index.php file in browser it will display datagrid containing all repositories.
+	
+ARchitecture
+
+	dataFeeder class under classes directory contains functions for loading data intodtabase tables. we are loading 30 most starred php repositories from github as of now.
+	if you wantto change this number go to dataFeeder class in data_feeder.php file under classes directory and make following change in constructor.
+	
+	FROM
+	$this->repos = $client->api('search')->setPerPage(30)->repositories('php','stars','desc');
+	
+	TO
+	$this->repos = $client->api('search')->setPerPage(100)->repositories('php','stars','desc');
+
+	
 		
 
 

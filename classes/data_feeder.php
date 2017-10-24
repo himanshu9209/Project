@@ -13,7 +13,7 @@ class dataFeeder
 		
 		//## invoke Github API and search for php repo with most stars in desc order 
 		$client = new \Github\Client();
-		$this->repos = $client->api('search')->setPerPage(100)->repositories('php','stars','desc');
+		$this->repos = $client->api('search')->setPerPage(30)->repositories('php','stars','desc');
 		
 		
 		$this->repos = $this->repos['items'];
