@@ -27,7 +27,7 @@ $(function() {
                     var d = $.Deferred();
      
                     $.ajax({
-                        url: "http://localhost/test/datagrid_feeder.php",
+                        url: "datagrid_feeder.php",
                         dataType: "json"
                     }).done(function(response) {
                         d.resolve(response.Repositoriess);
