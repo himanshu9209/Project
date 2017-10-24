@@ -104,7 +104,10 @@ Once you are dont with installation and build
 	
 ARchitecture
 
-	dataFeeder class under classes directory contains functions for loading data intodtabase tables. we are loading 30 most starred php repositories from github as of now.
+	Since we are using Propel ORM, when we build our project following steps mentioned above, Propel will create mapper and models for us. Propel also installs extensive class library
+	for us to interact with tables in our database.
+
+	dataFeeder class under classes directory contains functions for loading data into database tables. we are loading 30 most starred php repositories from github as of now.
 	if you wantto change this number go to dataFeeder class in data_feeder.php file under classes directory and make following change in constructor.
 	
 	FROM
@@ -112,6 +115,16 @@ ARchitecture
 	
 	TO
 	$this->repos = $client->api('search')->setPerPage(100)->repositories('php','stars','desc');
+	
+	changing number of records to fetch after first load will also help you to verify auto edit feature of dataFeeder class.
+	
+	we are using JSGrid library for rendering our Data Grid. JSGrid is built on JQuery. we are loading file for these library from CDN, links for CDN are already mentioned in index.phpfile.
+	
+	under js/ directory we have js controller for JSGrid. we have mentioned our fields and field types in js controller file. we are creating AJAX call to datagrid_feeder.phpfile in loadData 
+	
+	function of js controller.
+	
+	on click of any row in datagrid will open modal window diaplaying all five fields of repository we have in database table. we are using jquery ui for this modal window.
 
 	
 		
